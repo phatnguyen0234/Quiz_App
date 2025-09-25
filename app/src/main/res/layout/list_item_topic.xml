@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/topic_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="#E0E0E0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/topic_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/text_dark"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/topic_rating"
+            app:layout_constraintStart_toEndOf="@id/topic_image"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Quy định chung" />
+
+        <TextView
+            android:id="@+id/topic_question_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:drawableStart="@drawable/ic_question_mark"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="@+id/topic_title"
+            app:layout_constraintTop_toBottomOf="@+id/topic_title"
+            tools:text="180 câu" />
+
+        <TextView
+            android:id="@+id/topic_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:drawableStart="@drawable/ic_time"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/topic_question_count"
+            app:layout_constraintStart_toEndOf="@+id/topic_question_count"
+            app:layout_constraintTop_toTopOf="@+id/topic_question_count"
+            tools:text="1 giờ" />
+
+        <TextView
+            android:id="@+id/topic_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_star"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:textColor="@color/text_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="4.8" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
